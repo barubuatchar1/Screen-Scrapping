@@ -1,0 +1,421 @@
+﻿/**
+Stylesheet for uccomfortkitpanel
+
+uccomfortkitpanel is a custom control for selecting meal package on 
+AirAsia Online Booking pages.
+
+All element classes are prefixed with uccomfortkitpanel*
+
+*/
+
+.uccomfortkitpanel {
+    position: relative;
+    z-index: 900;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-clear {
+    clear: both;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-wrapper {
+    position: relative;
+    background: white;
+    border: solid 1px #ccc;
+    padding: 16px;
+    min-width: 100px;
+    min-height: 100px;
+    z-index: 900;
+    float:left;
+    /*max-width: 575px;*/
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-close-btn 
+{
+    position: absolute; 
+    right: 5px; 
+    top: 5px; 
+    display: block;
+    background: #333;
+    padding: 5px 10px;
+    color: #fff !important; 
+    text-align: center;
+}
+.uccomfortkitpanel .uccomfortkitpanel-close-btn:hover 
+{
+    color: #fff; 
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-header-container {
+    padding: 15px;
+    cursor: default;
+    width: 400px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-headerimage-container {
+    float: left;
+    width:140px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-headerimage-box {
+    float: left;
+    width: 58px;
+    height: 58px;
+    border: solid 1px #ccc;
+    background: white url('../../images/meal-empty.png') no-repeat center center;
+    margin: 0 6px 0 0;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-headerimage-box img {
+    max-width: 58px;
+    max-height: 58px;
+    z-index: 10;
+    position: relative;
+    display: none;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-headerimage-box .uccomfortkitpanel-number {
+    position: absolute;
+    top: 22px;
+    height: 18px;
+    line-height: 18px;
+    left: 2px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-header {
+    float: left;
+    padding-left: 7px;
+    width: 300px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-header-title {
+    color: #d00;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-header-subtitle {
+    font-size: 11px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-header-subtitle a 
+{
+    color: #000;
+    text-decoration: underline;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-tab {
+    clear: both;
+    padding-top: 25px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    border: none;
+    top: 0;
+    white-space: nowrap;
+    background: #fff;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-tab ul li {
+    /*float: left;*/
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    height: 41px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-tab ul li a {
+    display: block;
+    background: #666;
+    color: white;
+    margin-right: 1px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    padding: 0 23px;
+    text-transform:capitalize !important;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-tab ul li.uccomfortkitpanel-selected a {
+    background: url('../../images/AKNewSkin/redtab.gif') repeat-x center bottom transparent;
+    padding-bottom: 6px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content 
+{
+    clear: both;
+    padding: 11px 0 0 0;
+    position: relative;
+}
+.uccomfortkitpanel .uccomfortkitpanel-content-slider-right,
+.uccomfortkitpanel .uccomfortkitpanel-content-slider-left 
+{
+    z-index:9999;
+    text-decoration:none;
+}
+.uccomfortkitpanel .uccomfortkitpanel-content-slider-left 
+{
+    position: absolute;
+    top: 50%;
+    margin-top: -135px;
+    line-height: 200px;
+    width: 16px;
+    font-size: 16px;
+    text-align: left;
+    left: 0;
+    color: #666;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content-slider-right 
+{
+    position: absolute;
+    top: 50%;
+    margin-top: -135px;
+    line-height: 200px;
+    width: 16px;
+    font-size: 16px;
+    text-align: right;
+    right: 0;
+    color: #666;
+}
+.uccomfortkitpanel .uccomfortkitpanel-content-slider-left:hover,
+.uccomfortkitpanel .uccomfortkitpanel-content-slider-right:hover 
+{
+    color: #dd0000;
+}
+.uccomfortkitpanel .uccomfortkitpanel-content-slider-left.disabled,
+.uccomfortkitpanel .uccomfortkitpanel-content-slider-right.disabled
+{
+    color: #ccc;
+    cursor: default;
+}
+
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul.uccomfortkitpanel-item-container 
+{
+    display: block;
+    top: 0;
+    position: relative;
+    /*margin: 0 -14px;*/
+    padding: 0;
+    background: transparent !important;
+    border: none !important;
+    text-align: center;
+    white-space: nowrap;
+    width: 400px;
+    min-height: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul li.uccomfortkitpanel-item 
+{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    width: 158px;
+    margin: 0;
+    padding: 0 0 4px 0;
+    vertical-align: top;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-image 
+{
+    background: url('../../images/meal-empty-90.png') no-repeat center center;
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    -moz-transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-image img 
+{
+    min-height: 100%;
+    min-width: 100%;
+    margin: auto;
+    cursor:pointer;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item.disabled .uccomfortkitpanel-item-image {
+    opacity: 0.4;
+}
+
+@media \0screen { /* ie8 hacks */
+    .uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item.disabled .uccomfortkitpanel-item-image {
+        filter: alpha(opacity=40);
+    }
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-selection 
+{
+    padding-top: 4px;
+}
+ 
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-selection-form 
+{
+    position: relative;
+    width: 64px;
+    height: 26px;
+    margin: auto;
+    display: none;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-check
+{
+    line-height: 26px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-sf-count-input 
+{
+    width: 27px;
+    background: white;
+    border: solid 1px #ccc;
+    position: absolute;
+    left: 18px;
+    top: 4px;
+    height: 17px;
+    padding: 0;
+    text-align: center;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-sf-min-btn,
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-sf-plus-btn
+{
+    width: 17px;
+    border: solid 1px #ccc;
+    margin: 0 -1px 0 0 !important;
+    position: absolute;
+    top: 4px;
+    height: 17px;
+    background: #e8e8e8;
+    text-decoration:none !important;
+}
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-sf-min-btn 
+{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-sf-plus-btn 
+{
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-sf-min-btn.disabled,
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-sf-plus-btn.disabled 
+{
+    background: white;
+    cursor: default;
+    color: #ccc;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-caption 
+{
+    text-align: center;
+    padding: 0 4px 4px 0;
+    white-space: normal;
+}
+ 
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-price 
+{
+    color: #d00;
+    display: block;
+    font-weight: bold;
+    padding: 4px 0 2px 0;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-content ul .uccomfortkitpanel-item-name 
+{
+    display: block;
+    font-size: 11px;
+    color: Black;
+} 
+.uccomfortkitpanel .uccomfortkitpanel-footer hr
+{
+    width:100%
+}
+.uccomfortkitpanel .uccomfortkitpanel-footer 
+{
+    border-top: solid 1px #ccc;
+    margin:16px -16px -16px -16px;
+    /*overflow:hidden;
+    width:100% !important; */
+    display:block;
+}
+.uccomfortkitpanel-disabled .uccomfortkitpanel-footer
+{
+    border-top: none;
+    overflow:hidden;
+    position:relative;
+    
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-footnote 
+{
+    float: left;
+    font-size: 11px;
+    color: #666;
+    padding: 13px 28px;
+    /*width:300px;*/
+    display:block;
+    position:relative;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-footnav 
+{
+    float: right;
+    height: 38px;
+    /*padding-right: 10px;*/
+    line-height: 38px;
+    font-size: 11px;
+    color: #aaa;
+    min-width:250px;
+    /*width:325px;*/
+    text-align:right;
+    display:block;
+    position:relative;
+}
+.uccomfortkitpanel .uccomfortkitpanel-footnav-prev-btn,
+.uccomfortkitpanel .uccomfortkitpanel-footnav-next-btn 
+{
+    margin: 0 18px;
+    color: #aaa !important;
+}
+
+.uccomfortkitpanel .uccomfortkitpanel-footnav-prev-btn:hover,
+.uccomfortkitpanel .uccomfortkitpanel-footnav-next-btn:hover
+{
+    color: #000 !important;
+}
+
+
+/** CULTURAL COMPLIANCES **/
+
+/* ZH-CN */
+.culture-zh-CN .uccomfortkitpanel .uccomfortkitpanel-tab ul li a
+{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.uccomfortkitpanel-item-caption span
+{
+    float:none !important;
+}

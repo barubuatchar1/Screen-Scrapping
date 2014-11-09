@@ -1,0 +1,623 @@
+﻿/**
+Stylesheet for ucMealPanel
+
+ucMealPanel is a custom control for selecting meal package on 
+AirAsia Online Booking pages.
+
+All element classes are prefixed with ucmealpanel*
+
+*/
+
+.ucmealpanel {
+    position: relative;
+    z-index: 900;
+}
+
+.ucmealpanel .ucmealpanel-clear {
+    clear: both;
+}
+
+.ucmealpanel .ucmealpanel-wrapper {
+    position: relative;
+    background: white;
+    border: solid 1px #ccc;
+    padding: 16px;
+    min-width: 100px;
+    min-height: 100px;
+    z-index: 900;
+    float:left;
+    /* Extend for #4514 */
+    width: 770px;
+}
+
+.ucmealpanel .ucmealpanel-close-btn 
+{
+    position: absolute; 
+    right: 5px; 
+    top: 5px; 
+    display: block;
+    background: #333;
+    padding: 5px 10px;
+    color: #fff !important; 
+    text-align: center;
+}
+.ucmealpanel .ucmealpanel-close-btn:hover 
+{
+    color: #fff; 
+}
+
+.ucmealpanel .ucmealpanel-header-container {
+    padding: 15px;
+    cursor: default;
+    /* extend for #4514 */
+    width: 652px;
+}
+
+.ucmealpanel .ucmealpanel-headerimage-container {
+    float: left;
+    width:140px;
+}
+
+.ucmealpanel .ucmealpanel-headerimage-box {
+    float: left;
+    width: 58px;
+    height: 58px;
+    border: solid 1px #ccc;
+    background: white url('../../../../images/aa-sprites.png') -325px -40px no-repeat;
+    margin: 0 6px 0 0;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.upsizeBox .ucmealpanel-headerimage-box {
+    float: left;
+    width: 58px;
+    height: 58px;
+	border: 1px solid rgb(204, 204, 204);
+	background: url("../../../../images/aa-sprites.png") no-repeat scroll -395px -40px rgb(255, 255, 255);
+    margin: 0 6px 0 0;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+/* KoKSeng */
+.upsizeBox .ucmealpanel-headerimage-box.mxak-headerimage-box{
+	background-image: url("../../../../images/upsize-empty-MXAK.PNG");
+    background-size: contain;
+    background-position: center center;
+}
+
+
+
+.ucmealpanel .ucmealpanel-headerimage-box img {
+    max-width: 58px;
+    max-height: 58px;
+    z-index: 10;
+    position: relative;
+    display: none;
+}
+
+.ucmealpanel .ucmealpanel-headerimage-box .ucmealpanel-number {
+    position: absolute;
+    top: 22px;
+    height: 18px;
+    line-height: 18px;
+    left: 2px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.ucmealpanel .ucmealpanel-header {
+    float: left;
+    /*padding-left: 7px;*/
+    /*width: 485px;*/  /*Edited by Shermynn*/
+}
+
+.ucmealpanel .ucmealpanel-header-title {
+    color: #d00;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.ucmealpanel .ucmealpanel-header-subtitle {
+    font-size: 12px;
+}
+
+.ucmealpanel .ucmealpanel-header-subtitle a 
+{
+    color: #000;
+    text-decoration: underline;
+}
+
+.ucmealpanel .ucmealpanel-tab {
+    clear: both;
+    padding-top: 25px;
+}
+
+.ucmealpanel .ucmealpanel-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    border: none;
+    top: 0;
+    white-space: nowrap;
+    background: #fff;
+	min-width: 688px; /*Added by piksan on 26 Nov 2013*/
+}
+
+.ucmealpanel .ucmealpanel-tab ul li {
+    /*float: left;*/
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    height: 41px;
+}
+
+.ucmealpanel .ucmealpanel-tab ul li a {
+    display: block;
+    background: #666;
+    color: white;
+    margin-right: 1px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    padding: 0 20px;
+    /*text-transform:capitalize !important;*/
+}
+
+.ucmealpanel .ucmealpanel-tab ul li.ucmealpanel-selected a {
+    background: url('../../../../images/AKNewSkin/redtab.gif') repeat-x center bottom transparent;
+    padding-bottom: 6px;
+}
+
+.ucmealpanel .ucmealpanel-content 
+{
+    clear: both;
+    /*padding: 11px 0 0 0;*/  /*Edited by Shermynn*/
+    position: relative;
+}
+.ucmealpanel .ucmealpanel-content-slider-right,
+.ucmealpanel .ucmealpanel-content-slider-left 
+{
+    z-index:9999;
+    text-decoration:none;
+}
+.ucmealpanel .ucmealpanel-content-slider-left 
+{
+    position: absolute;
+    top: 88%;
+    margin-top: -135px;
+    line-height: 200px;
+    /*width: 16px;
+    font-size: 16px;*/
+    text-align: left;
+    left: 0;
+    /*color: #666;*/
+}
+
+.ucmealpanel .ucmealpanel-content-slider-right 
+{
+    position: absolute;
+    top: 88%;
+    margin-top: -135px;
+    line-height: 200px;
+    /*width: 16px;
+    font-size: 16px;*/
+    text-align: right;
+    right: 0;
+    /*color: #666;*/
+}
+
+.ucmealpanel .ucmealpanel-content-slider-left div
+{
+    /*background: url("../../../../images/aa-sprites.png") no-repeat scroll -375px -240px transparent;*/
+	background: url("../../../../images/aa-sprites.png") no-repeat scroll -325px -240px transparent;
+    width: 17px;
+    height: 30px;
+}
+
+.ucmealpanel .ucmealpanel-content-slider-right div
+{
+    /*background: url("../../../../images/aa-sprites.png") no-repeat scroll -400px -240px transparent;*/
+	background: url("../../../../images/aa-sprites.png") no-repeat scroll -350px -240px transparent;
+    width: 17px;
+    height: 30px;
+}
+
+/*.ucmealpanel .ucmealpanel-content-slider-left:hover,
+.ucmealpanel .ucmealpanel-content-slider-right:hover 
+{
+    color: #dd0000;
+}
+.ucmealpanel .ucmealpanel-content-slider-left.disabled,
+.ucmealpanel .ucmealpanel-content-slider-right.disabled
+{
+    color: #ccc;
+    cursor: default;
+}*/
+
+.ucmealpanel .ucmealpanel-content-slider-left div:hover
+{
+    background: url("../../../../images/aa-sprites.png") no-repeat scroll -325px -240px transparent;
+    width: 17px;
+    height: 30px;
+}
+
+.ucmealpanel .ucmealpanel-content-slider-right div:hover 
+{
+    background: url("../../../../images/aa-sprites.png") no-repeat scroll -350px -240px transparent;
+    width: 17px;
+    height: 30px;
+}
+
+.ucmealpanel .ucmealpanel-content-slider-left.disabled div
+{
+    background: url("../../../../images/aa-sprites.png") no-repeat scroll -375px -240px transparent;
+    width: 17px;
+    height: 30px;
+    cursor: default;
+}
+
+.ucmealpanel .ucmealpanel-content-slider-right.disabled div
+{
+    background: url("../../../../images/aa-sprites.png") no-repeat scroll -400px -240px transparent;
+    width: 17px;
+    height: 30px;
+    cursor: default;
+}
+
+.ucmealpanel .ucmealpanel-content ul.ucmealpanel-item-container,
+.ucmealpanel .ucmealpanel-content div.ucmealpanel-item-container 
+{
+    display: block;
+    top: 0;
+    position: relative;
+    /*margin: 0 -14px;*/
+    padding: 0;
+    background: transparent !important;
+    border: none !important;
+    text-align: center;
+    white-space: nowrap;
+    width: 632px;
+    min-height: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.ucmealpanel .ucmealpanel-content ul li.ucmealpanel-item 
+{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    width: 158px;
+    margin: 0;
+    padding: 0 0 4px 0;
+    vertical-align: top;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-image,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-image 
+{
+    background: url('../../../../images/meal-empty-90.png') no-repeat center center;
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    -moz-transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-image img ,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-image img 
+{
+    min-height: 100%;
+    min-width: 100%;
+    margin: auto;
+    cursor:pointer;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item.disabled .ucmealpanel-item-image,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item.disabled .ucmealpanel-item-image {
+    opacity: 0.4;
+}
+
+@media \0screen { /* ie8 hacks */
+    .ucmealpanel .ucmealpanel-content ul .ucmealpanel-item.disabled .ucmealpanel-item-image,
+    .ucmealpanel .ucmealpanel-content div .ucmealpanel-item.disabled .ucmealpanel-item-image {
+        filter: alpha(opacity=40);
+    }
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-selection,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-selection 
+{
+    padding-top: 4px;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-selection-form
+{
+    position: relative;
+    width: 64px;
+    height: 26px;
+    margin: auto;
+    display: none;
+}
+
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-selection-form
+{
+    position: relative;
+    width: 64px;
+    height: 26px;
+    display: none;
+}
+
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-check,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-check,
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-check1,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-check1
+{
+    line-height: 26px;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-sf-count-input ,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-count-input 
+{
+    width: 27px;
+    background: white;
+    border: solid 1px #ccc;
+    position: absolute;
+    left: 18px;
+    top: 4px;
+    height: 17px;
+    padding: 0;
+    text-align: center;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-sf-min-btn,
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-sf-plus-btn,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-min-btn,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-plus-btn
+{
+    width: 17px;
+    border: solid 1px #ccc;
+    margin: 0 -1px 0 0 !important;
+    position: absolute;
+    top: 4px;
+    height: 17px;
+    background: #e8e8e8;
+    text-decoration:none !important;
+}
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-sf-min-btn ,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-min-btn 
+{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-sf-plus-btn ,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-plus-btn
+{
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-min-btn,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-plus-btn
+{
+    text-align : center ;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-sf-min-btn.disabled,
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-sf-plus-btn.disabled ,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-min-btn.disabled,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-sf-plus-btn.disabled
+{
+    background: white;
+    cursor: default;
+    color: #ccc;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-caption
+{
+    text-align: center;
+    padding: 0 4px 4px 0;
+    white-space: normal;
+}
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-caption
+{
+    text-align: left;
+    padding: 4px 4px 4px 0;
+    white-space: normal;
+}
+ 
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-price ,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-price 
+{
+    color: #d00;
+    display: block;
+    font-weight: bold;
+    padding: 4px 0 2px 0;
+}
+
+.ucmealpanel .ucmealpanel-content ul .ucmealpanel-item-name ,
+.ucmealpanel .ucmealpanel-content div .ucmealpanel-item-name 
+{
+    display: block;
+    font-size: 12px;
+    color: Black;
+} 
+.ucmealpanel .ucmealpanel-footer hr
+{
+    width:100%
+}
+.ucmealpanel .ucmealpanel-footer 
+{
+    border-top: solid 1px #ccc;
+    margin:16px -16px -16px -16px;
+    /*overflow:hidden;
+    width:100% !important; */
+    display:block;
+}
+.ucmealpanel-disabled .ucmealpanel-footer
+{
+    border-top: none;
+    overflow:hidden;
+    position:relative;
+    
+}
+
+.ucmealpanel .ucmealpanel-footnote /*updated by waiyeap 10032014*/
+{
+    float: left;
+    font-size: 12px;
+    color: #666;
+    padding: 13px 8px 8px 28px;
+    /* Extend for #4514 */
+    width:450px;
+    display:block;
+    position:relative;
+}
+
+.mealFootnoteText{/*updated by waiyeap 1003201*/
+	/*color: #AAAAAA; 
+	font-weight: bold; 
+	width: 325px;*/
+}
+
+.ucmealpanel .ucmealpanel-footnav 
+{
+    float: right;
+    height: 38px;
+    /*padding-right: 10px;*/
+    line-height: 38px;
+    font-size: 11px;
+    color: #aaa;
+    min-width:250px;
+    /*width:325px;*/
+    text-align:right;
+    display:block;
+    position:relative;
+}
+.ucmealpanel .ucmealpanel-footnav-prev-btn,
+.ucmealpanel .ucmealpanel-footnav-next-btn 
+{
+    margin: 0 18px;
+    color: #aaa !important;
+}
+
+.ucmealpanel .ucmealpanel-footnav-prev-btn:hover,
+.ucmealpanel .ucmealpanel-footnav-next-btn:hover
+{
+    color: #000 !important;
+}
+
+/*Added by Sean Start*/
+.ucmealpanel-item-selection
+{
+	margin-left: 10px;
+	position: relative;
+	width: 140px;
+}
+.ucmealpanel-item-caption
+{
+	margin-left: 18px;
+	position: relative;
+	width: 120px;
+}
+/*Added by Sean End*/
+
+
+/** CULTURAL COMPLIANCES **/
+
+/* ZH-CN */
+.culture-zh-CN .ucmealpanel .ucmealpanel-tab ul li a
+{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.ucmealpanel-item-caption span
+{
+    float:none !important;
+}
+
+.upsizeIcon
+{
+    background: url('../../../../images/upsize-plus-icon.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.upsizeBox
+{
+    background-color: #ffffcc ;
+    padding:8px;
+    display: inline-block;
+    width:450px;
+    /* margin-right:33px; */
+    margin-top: -8px;
+}
+
+.upsizeMeal
+{
+    margin-right: 15px;
+    width: 470px;
+    float:none;
+}
+
+/* any class end with upsizeMealHeader will be set automatic*/
+.span[class$='upsizeMealHeader']{
+    width: 400px;
+}
+
+/*.XJupsizeMealHeader, .AKupsizeMealHeader,.QZupsizeMealHeader,.FDupsizeMealHeader,.QZupsizeMealHeader,.PQupsizeMealHeader,.JWupsizeMealHeader,.Z2upsizeMealHeader {
+    width: 400px;
+}*/
+
+
+.minPlus
+{
+    margin-top: -27px;
+    /* Extend for #4514*/
+    margin-right: 15px;
+    float: right;
+}
+
+.upsizeBox .ucmealpanel-item-selection
+{
+	margin-left: 10px;
+	position: relative;
+    /* Extend for #4514*/
+	width: 320px;
+}
+.upsizeBox .ucmealpanel-item-caption
+{
+	margin-left: 18px;
+	position: relative;
+	width: 230px;
+}
+
+.upsizeBox .upsizeImage {
+    float:left;
+}
+
+.upsizeBox .upsizeSelect {
+    float:left;
+	width:100px;
+}
+
+/**/

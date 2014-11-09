@@ -1,0 +1,1 @@
+var ebReportingImg_0 = new Image();ebReportingImg_0.src='http://ib.adnxs.com/seg?add=309480&t=2';var part_1 = '';part_1 += "<"+"script language=\'JavaScript1.1\' src=\'https://pixel.mathtag.com/event/js?mt_id=448387&mt_adid=119831&v1=&v2=&v3=&s1=&s2=&s3=\'><"+"/script>\n";document.write(part_1);
